@@ -75,7 +75,7 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://glacial-hamlet-49842.herokuapp.com/imageurl', {
+      fetch('https://face-app-api-2684.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify({
@@ -85,7 +85,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://glacial-hamlet-49842.herokuapp.com/image', {
+          fetch('https://face-app-api-2684.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
